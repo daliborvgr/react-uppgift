@@ -1,5 +1,5 @@
 export type AddonKey = 'GPS' | 'Baby seat' | 'Extra driver' | 'Insurance';
-
+ 
 export interface Car {
   id: number;
   category: string;
@@ -7,27 +7,27 @@ export interface Car {
   kmPrice: number;
   premiumFee: number;
 }
-
+ 
 export interface BookingRequest {
   personNumber: string;
   id: number;
-  timeStart: string;
-  timeEnd: string;
+  timeStart: string ;
+  timeEnd: string ;
   currentMileage: number;
   addons: AddonKey[];
 }
-
+ 
 export interface BookingResponse {
   success: boolean;
   message: string;
   bookingNumber: number;
 }
-
+ 
 export interface ReturnRequest {
   actualTimeEnd: string;
   returnMileage: number;
 }
-
+ 
 export interface ReturnResponse {
   success: boolean;
   message: string;
@@ -39,7 +39,7 @@ export interface ReturnResponse {
   delayFee: number;
   finalPrice: number;
 }
-
+ 
 export interface BookingMetadata {
   bookingNumber: number;
   personNumber: string;
